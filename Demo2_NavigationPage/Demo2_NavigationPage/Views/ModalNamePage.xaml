@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Demo2_NavigationPage.Views.ModalNamePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Title label - message to the (yet unknown) user -->
+            <Label x:Name="txtTitle" Text="Modal page: input needed!" FontSize="Title"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Please enter your name:" />
+            <!-- Input field for the name (handle text changed event): -->
+            <Entry x:Name="txtName" TextChanged="TxtName_TextChanged" />
+            <!-- Button to navigate back - this should only work if the input field is not empty!! -->
+            <Button x:Name="btnNavBack" Text="&lt; &lt; GO BACK" Clicked="BtnNavBack_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
